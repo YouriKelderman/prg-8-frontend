@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +14,59 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.mText{
+  margin-left: 1.5rem;
+}
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.chatBar{
+  width: calc(100% - 60px);
+}
+.h-90{
+  height: 90%;
+}
+
+.menuColor{
+  background-color: rgb(109 109 109 / 6%);
+}
+
+.borderbottom{
+  border-width: 0 0 1px 0;
+  width: 150px !important;
+  overflow: scroll;
+}
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+.newButton{
+  width: 150px;
+  text-align:center;
+}
+.chordSpan{
+  background-color: rgb(91 33 182);
+  border-radius: 0.2rem;
+  padding: 2px 5px;
+  margin-top: 10px;
+  display: inline;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

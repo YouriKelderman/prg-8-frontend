@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {BackgroundGradientAnimation} from "./components/ui/background-gradient-animation.tsx";
+import InputForm from "./components/form";
+import logo from '../src/img/Varia-removebg-preview (2).png'
+import {TracingBeam} from "./components/ui/tracing-beam.tsx";
+import * as Tone from 'tone'
+const synth = new Tone.Synth().toDestination();
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+    return (
+
+        <BackgroundGradientAnimation>
+
+            <InputForm></InputForm>
+        </BackgroundGradientAnimation>
+    );
 }
-
-export default App;
